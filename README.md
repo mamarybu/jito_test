@@ -27,7 +27,63 @@ A developer-facing reference sheet translating the brand into implementation-rea
 ### Design Tokens
 
 ```
-<!-- ADD / FINALIZE YOUR DESIGN TOKENS HERE -->
+# Cellar Design Tokens
+
+## Colors — Light Mode
+
+Primary (Aubergine): #4A2545
+Primary Dark (Aubergine Deep): #35192F
+Accent (Goldenrod): #D9A441
+Background (Newsprint): #F3EFE4
+Surface (Card Stock): #FBF7EC
+Text Primary (Ink Navy): #22262E
+Text Secondary (Faded Ink): #6E6656
+Border (Parchment Line): #E2DBC9
+Success (Sage): #6B8F71
+Warning (Ochre): #C97A2B
+Error (Currant): #A13344
+
+## Colors — Dark Mode
+
+Primary (Orchid): #C18BB9
+Primary Dark (Orchid Deep): #B464AA
+Accent (Goldenrod Light): #E0B563
+Background (Espresso): #1C1712
+Surface (Charred Oak): #2A231C
+Text Primary (Newsprint): #F3EFE4
+Text Secondary (Faded Parchment): #A79C87
+Border (Charred Line): #3A322A
+Success (Sage Light): #8FB694
+Warning (Ochre Light): #E0954C
+Error (Currant Light): #D1637A
+
+## Fonts
+
+Heading: Space Grotesk — weights 500, 600, 700
+Body: IBM Plex Mono — weights 400, 500, 600
+
+H1: Space Grotesk 700, 28px, line-height 36px, letter-spacing -0.01em
+H2: Space Grotesk 700, 22px, line-height 28px
+H3: Space Grotesk 600, 17px, line-height 22px
+Body: IBM Plex Mono 400, 15px, line-height 22px
+Caption: IBM Plex Mono 400, 12px, line-height 16px
+Button Label: Space Grotesk 600, 14px, line-height 20px, letter-spacing 0.02em
+
+## Spacing (Indents)
+
+space-1: 4px
+space-2: 8px
+space-3: 12px
+space-4: 16px
+space-5: 24px
+space-6: 32px
+space-7: 48px
+space-8: 64px
+
+Screen margin: 16px
+Column gutter: 8px
+Base unit: 4px
+Min touch target: 44px
 
 ```
 
