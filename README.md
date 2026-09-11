@@ -2,7 +2,7 @@
 
 Cellar is an MVP concept for a mobile nutrition app focused on two core tasks: tracking calories and macros, and finding recipes that fit the user's preferences and daily goals.
 
-**Video walkthrough:** [ADD LINK]
+**Video walkthrough:** [[LINK]](https://drive.google.com/file/d/1bqmMyW9zb88oZzzRT2NwpCKrCqaXCSGl/view?usp=sharing)
 
 The project was created through an AI-native workflow using Claude Code — from visual exploration and the design system to key user flows and UX iterations.
 
