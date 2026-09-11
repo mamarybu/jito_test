@@ -1,18 +1,22 @@
 # Cellar — Calorie & Nutrition App
 
-A design case study for **Cellar**, a mobile calorie and nutrition companion built around two core jobs: calculate the calories in a dish or product, and find a recipe that fits your diet and remaining calorie budget.
+Cellar is an MVP concept for a mobile nutrition app focused on two core tasks: tracking calories and macros, and finding recipes that fit the user's preferences and daily goals.
 
 **Video walkthrough:** [ADD LINK]
 
-This project was designed with an **AI-native workflow**: branding, the design system, and every screen were produced through an iterative conversation with Claude rather than a traditional design tool — from initial brand exploration through a structured usability pass against Jakob Nielsen's ten heuristics.
+The project was created through an AI-native workflow using Claude Code — from visual exploration and the design system to key user flows and UX iterations.
 
 ---
 
-## 1. Branding & Visual Identity
+## 1. Brand Direction
 
-Three genuinely different stylescape directions were explored first — a technical/instrument aesthetic, a bold poster/scoreboard aesthetic, and a warm editorial cookbook aesthetic — before converging on the final direction: **Cellar**, a deep aubergine-and-goldenrod palette on newsprint, paired with Space Grotesk (headings) and IBM Plex Mono (body and every number). The name itself changed mid-project after the working name "Larder" turned out to already belong to two existing recipe apps.
+Cellar moves away from the typical green-and-white visual language of nutrition apps.
 
-The brand foundations board finalizes the name, a ten-token color palette, the confirmed type pairing, the app icon concept, and core UI fragments, with the rationale for each decision.
+The identity combines deep aubergine, warm goldenrod and soft neutral surfaces to create a more mature, food-focused experience without visually labeling choices as “healthy” or “unhealthy.”
+
+**Space Grotesk** creates a clear and approachable hierarchy, while **IBM Plex Mono** gives nutritional values and metadata a structured, data-driven feel.
+
+The result is intended to feel closer to a modern food editorial product than a traditional calorie counter.
 
 ![Branding preview](./branding.png)
 
@@ -20,7 +24,17 @@ The brand foundations board finalizes the name, a ten-token color palette, the c
 
 ## 2. Design System
 
-A developer-facing reference sheet translating the brand into implementation-ready tokens: color (light and dark), the full typography scale, the 4/8pt spacing and grid, corner-radius and elevation tokens, a base icon set, and eight core components — buttons, input, food/recipe card, bottom tab bar, top nav, filter chip, calorie progress ring, and list row — each shown in its default, pressed, and disabled states.
+The visual direction was translated into a reusable mobile design system covering typography, color, spacing, elevation, icons and core UI components.
+
+The system supports both light and dark modes and keeps nutritional data, actions and navigation consistent across the product.
+
+### Core foundations
+
+- 4pt spacing system
+- 44px minimum touch targets
+- Light and dark color tokens
+- Reusable navigation, inputs, cards, filters and buttons
+- Dedicated states for progress, feedback and system status
 
 ![Design system preview](./design-system.png)
 
@@ -89,24 +103,45 @@ Min touch target: 44px
 
 ---
 
-## 3. Key Screens — Two User Flows
+## 3. Core User Flows
 
-Seven screens at true iPhone size (375×812), built entirely from the design system above, connected on one canvas with labeled navigation arrows:
+The MVP focuses only on the two main user journeys required for the task.
 
-- **Flow 1 — Calculate Calories:** Home / Dashboard → Add Food → Product Detail → Food Diary
-- **Flow 2 — Find a Recipe:** Recipe Discovery → Recipe Filters → Recipe Detail
+**Flow 1 — Track Food**  
+Home → Add Food → Product Detail → Food Diary
 
-The screens went through two rounds of revision. **v2** applied Jakob Nielsen's ten usability heuristics across the board — clearer portion and calorie information, stronger visual hierarchy, unambiguous icons, consistent terminology and button states, and previously-missing loading, empty, error, success, and undo states. **v3** followed with a narrower, targeted pass on top of that: consumed/goal macro labels instead of bare numbers, a smaller Quick Add control, per-item macros wherever calories are shown, a decluttered Food Diary, search and a favorites toggle added to Recipe Discovery, right-sized filter controls, a cleaner calorie block and checkable steps on Recipe Detail, and the standalone Saved Recipes screen folded into Recipe Discovery's in-context favorites instead of a separate tab. Every screen carries a short change log tagged to the heuristic it addresses.
+Users can understand their daily calorie and macro progress, find or scan food, adjust portions and add products to their diary.
+
+**Flow 2 — Find a Recipe**  
+Recipe Discovery → Filters → Recipe Detail
+
+Users can explore recipes based on their remaining calorie budget, filter them by dietary preferences and available ingredients, save favorites and follow cooking steps.
+
+These screens should be treated as the foundation of a product rather than a complete production-ready application.
 
 ![Key screens preview](./key-screens.png)
 
 ---
 
+## UX Iteration
+
+The first version was reviewed against Jakob Nielsen's usability heuristics and then refined through a focused UX pass.
+
+The main improvements included clearer consumed-vs-goal nutrition values, more compact actions, visible macros on food and recipe cards, simplified navigation, recipe search and favorites, better filters, and checkable cooking steps.
+
+The goal was not to redesign the concept, but to remove unnecessary friction from the two main flows.
+
+---
+
 ## Process & Prompts
 
-This case study was built through an iterative, AI-native workflow — every deliverable started as a written prompt. Add your prompt history for each stage below.
+Claude Code was used throughout the project as an active design tool rather than only for final execution.
 
-**Branding & Visual Identity**
+The workflow followed a simple cycle:
+
+**Explore → Generate → Review → Identify UX issues → Refine**
+
+The prompt history below documents the main iterations used to develop the brand, design system and final screens.
 
 ```
 1/I'm designing a mobile app called a calorie & nutrition calculator (working name TBD — propose 3 short, memorable name options as part of this). Two core user stories it must support: 1) Calculate the calories in a dish or a specific food product. 2) Find a recipe that suits the user's diet and remaining calorie budget. Create 3 distinct branding / stylescape directions for this app. For each direction show, on its own artboard: - A proposed app name + one-line personality statement - A color palette with 5-6 named hex swatches (primary, secondary/accent, background, surface, text, one semantic color) - Typography: a heading + body font pairing rendered as real type specimens - App icon concept - 2-3 sample UI fragments in that style (a button, a stat chip showing "420 kcal", a small card) - A short rationale for why it fits a nutrition/calorie-tracking app Keep the 3 directions genuinely different — avoid generic "healthy app" clichés (mint green + white, cream + terracotta). All text in English.
